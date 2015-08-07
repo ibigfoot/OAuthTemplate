@@ -3,5 +3,6 @@
   "description": "A barebones Java webapp that simply OAuth's to Salesforce",
   "repository": "https://github.com/ibigfoot/OAuthTemplate",
   "logo": "https://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["java", "oauth", "salesforce"]
+  "keywords": ["java", "oauth", "salesforce"],
+  "addons": ["memcachier:dev"]
 }

@@ -46,6 +46,6 @@ Run in eclipse without the --session-store attribute if this bothers you
     
 #OR
 
-Here is a friendly Heroku button.. It will create into Heroku for you, but the redirect_uri OAuth parameter is still configured as a servlet init param, so will need some intervetion before this wor
+Here is a friendly Heroku button.. It will create into Heroku for you, but the redirect_uri OAuth parameter is still configured as a servlet init param, so will need some intervetion before this works
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
