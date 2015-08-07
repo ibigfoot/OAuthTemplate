@@ -9,7 +9,7 @@ Assumes you have configured your local environment with the [Heroku Toolbelt](ht
 
 Open a terminal window and start typing... (output of each command ommitted)
 
-    cd documenter
+    cd OAuthTemplate
     git remote -rm origin 
     mvn package
     java -jar target/dependency/webapp-runner.jar target/*.war
@@ -35,8 +35,15 @@ Run directly from Eclipse
 - Set arguments to -jar target/dependency/webapp-runner.jar --session-store memcache target/documenter.war
 - Go the environment tab and set the three memcachier envrionment passwords from Heroku.
 
+Something slightly broken with the Memcache stuff when running locally, not sure what yet. 
+Run in eclipse without the --session-store attribute if this bothers you
+
 ##Run Heroku
 
 	cd documenter 
     heroku scale web=1
     heroku logs --tail
+    
+#OR
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
