@@ -36,7 +36,7 @@ public class HelloServlet extends HttpServlet{
 		if(accessToken != null && !accessToken.isEmpty()) {
 			logger.info("Have an active session");
 			PrintWriter writer = resp.getWriter();
-			writer.write("You have an access token ... use it wisely young jedi");
+			writer.write("You have an access token ... use it wisely young jedi\n");
 			writer.write(accessToken);
 			writer.flush();
 			writer.close();
