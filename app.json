@@ -4,5 +4,19 @@
   "repository": "https://github.com/ibigfoot/OAuthTemplate",
   "logo": "https://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["java", "oauth", "salesforce"],
-  "addons": ["memcachier:dev"]
+  "addons": ["memcachier:dev"],
+   "env": {
+    "clientId": {
+      "description": "Your OAuth client ID.",
+      "value": "<<REPLACE>>"
+    },
+    "clientSecret": {
+      "description": "Your OAuth client secret.",
+      "value": "<<REPLACE>>"
+    },
+    "redirectUri" : {
+    	"description" : "The OAuth redirect URI",
+    	"value" : "<<REPLACE>>"
+    }
+  }
 }
