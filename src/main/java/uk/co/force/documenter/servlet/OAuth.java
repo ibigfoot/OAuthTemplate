@@ -31,10 +31,10 @@ import uk.co.force.documenter.OAuthConstants;
 		urlPatterns = {"/oauth*", "/oauth/*"},
 		initParams = {
 			//clientId is 'Consumer Key', clientSecret is 'Consumer Secret' 
-			@WebInitParam(name = "clientId", value="3MVG9Rd3qC6oMalVL_ZWet4ueYzdRKSsAR2MTYVXhS7baMsQsh.xAAfs.uaeawxHxypyh7ON256A0UXkDZ4Sc"),
-			@WebInitParam(name="clientSecret", value="4538587340034276718"),
+			@WebInitParam(name = OAuthConstants.CLIENT_ID, value="3MVG9Rd3qC6oMalVL_ZWet4ueYzdRKSsAR2MTYVXhS7baMsQsh.xAAfs.uaeawxHxypyh7ON256A0UXkDZ4Sc"),
+			@WebInitParam(name= OAuthConstants.CLIENT_SECRET, value="4538587340034276718"),
 			// must match exactly Callback URL
-			@WebInitParam(name="redirectUri", value="http://localhost:8080/oauth/_callback"),
+			@WebInitParam(name=OAuthConstants.REDIRECT_URI, value="http://localhost:8080/oauth/_callback"),
 		}
 )
 public class OAuth extends HttpServlet {
@@ -54,15 +54,15 @@ public class OAuth extends HttpServlet {
 		
 		logger = LoggerFactory.getLogger(this.getClass());
 		
-		clientId = System.getenv("clientId");
-		clientSecret = System.getenv("clientSecret");
-		redirectUri = System.getenv("redirectUri");
+		clientId = System.getenv(OAuthConstants.CLIENT_ID);
+		clientSecret = System.getenv(OAuthConstants.CLIENT_SECRET);
+		redirectUri = System.getenv(OAuthConstants.REDIRECT_URI);
 		
 		if(clientId == null || clientSecret == null || redirectUri == null) {
 			logger.warn("Using local configuration from Servlet Parameter, couldn't find necessary env variables clientId[{}] clientSecret[{}] or redirectUri[{}]", clientId, clientSecret, redirectUri);
-			clientId = this.getInitParameter("clientId");
-			clientSecret = this.getInitParameter("clientSecret");
-			redirectUri = this.getInitParameter("redirectUri");
+			clientId = this.getInitParameter(OAuthConstants.CLIENT_ID);
+			clientSecret = this.getInitParameter(OAuthConstants.CLIENT_SECRET);
+			redirectUri = this.getInitParameter(OAuthConstants.REDIRECT_URI);
 		}
 		
 		logger.info("Initialised with ID [{}] Secret [{}] Redirect [{}]", clientId, clientSecret, redirectUri);		

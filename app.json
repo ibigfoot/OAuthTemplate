@@ -6,15 +6,15 @@
   "keywords": ["java", "oauth", "salesforce"],
   "addons": ["memcachier:dev"],
    "env": {
-    "clientId": {
+    "client_id": {
       "description": "Your OAuth client ID.",
       "value": "<<REPLACE>>"
     },
-    "clientSecret": {
+    "client_secret": {
       "description": "Your OAuth client secret.",
       "value": "<<REPLACE>>"
     },
-    "redirectUri" : {
+    "redirect_uri" : {
     	"description" : "The OAuth redirect URI",
     	"value" : "<<REPLACE>>"
     }
